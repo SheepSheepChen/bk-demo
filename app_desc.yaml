@@ -9,4 +9,4 @@ module:
       probes:           # k8s deployment 与 processes 为 1:1 关系，因此 probe 配置应该与 process 一一对应
         readiness:
           tcp_socket:
-            port: ${PORT}
+            port: 7090
