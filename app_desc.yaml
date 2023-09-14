@@ -7,6 +7,10 @@ module:
     web:
       command: gunicorn wsgi -w 4 -b :$PORT --access-logfile - --error-logfile - --access-logformat '[%(h)s] %({request_id}i)s %(u)s %(t)s "%(r)s" %(s)s %(D)s %(b)s "%(f)s" "%(a)s"'
       probes:           # k8s deployment 与 processes 为 1:1 关系，因此 probe 配置应该与 process 一一对应
+        liveness:
+          exec:
+            command:
+              - cat
         readiness:
           tcp_socket:
-            port: 7090
+            port: 9090
