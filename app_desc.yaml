@@ -11,6 +11,3 @@ module:
           exec:
             command:
               - cat
-        readiness:
-          tcp_socket:
-            port: ${PORT}
