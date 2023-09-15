@@ -13,4 +13,4 @@ module:
               - cat
         readiness:
           tcp_socket:
-            port: 9090
+            port: ${PORT}
