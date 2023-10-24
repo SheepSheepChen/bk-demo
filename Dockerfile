@@ -10,7 +10,6 @@ ENV PYTHONUNBUFFERED 1
 
 # 安装依赖
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
 # 复制项目文件
 COPY . .
