@@ -7,4 +7,4 @@ while true; do
 done &
 
 # 这个命令会阻塞容器，防止容器退出
-tail -f /dev/null
+tail -f /dev/null &
