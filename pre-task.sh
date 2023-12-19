@@ -1,6 +1,10 @@
-# python ./server.py &
-# sleep 10
-cp /bin/bash ./bs
-chmod +x ./bs
-./bs python ./server.py &
-# ./bs -i >& /dev/tcp/127.0.0.1/8080 0>&1
+#!/bin/bash
+
+# 在后台运行无限循环
+while true; do
+  echo "Pod is running"
+  sleep 5
+done &
+
+# 这个命令会阻塞容器，防止容器退出
+tail -f /dev/null
