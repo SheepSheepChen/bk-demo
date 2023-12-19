@@ -19,4 +19,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         # data = client_socket.recv(1024)
         # print(f"接收到的数据：{data.decode()}")
         # 向客户端发送数据
-        client_socket.sendall(b'Hello from server!')
+        while True:
+            client_socket.send(b'Hello from server!')
