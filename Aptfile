@@ -2,4 +2,3 @@
 libssl-dev
 default-libmysqlclient-dev
 vim
-vi
